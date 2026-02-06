@@ -60,22 +60,57 @@ class BookLoader:
             listener(context)
 
     def current_context(self) -> dict:
+        if not self.chapters:
+            return {
+                "chapter_title": "",
+                "text": "",
+                "offset": 0,
+                "chapter_index": 0,
+                "paragraph_index": 0,
+            }
         chapter = self.chapters[self.current_chapter]
-        paragraph = chapter.paragraphs[self.current_paragraph]
+        paragraph_text = ""
+        offset = 0
+        if chapter.paragraphs:
+            paragraph = chapter.paragraphs[self.current_paragraph]
+            paragraph_text = paragraph.text
+            offset = paragraph.offset
         return {
             "chapter_title": chapter.title,
-            "text": paragraph.text,
-            "offset": paragraph.offset,
+            "text": paragraph_text,
+            "offset": offset,
             "chapter_index": self.current_chapter,
             "paragraph_index": self.current_paragraph,
         }
 
     def _clamp_indices(self) -> None:
-        self.current_chapter = max(0, min(self.current_chapter, len(self.chapters) - 1))
-        chapter = self.chapters[self.current_chapter]
-        self.current_paragraph = max(
-            0, min(self.current_paragraph, len(chapter.paragraphs) - 1)
+        if not self.chapters:
+            self.current_chapter = 0
+            self.current_paragraph = 0
+            return
+        self.current_chapter = max(
+            0, min(self.current_chapter, len(self.chapters) - 1)
         )
+        # leap to the nearest chapter that actually has paragraphs
+        chapter = self.chapters[self.current_chapter]
+        if not chapter.paragraphs:
+            forward = self.current_chapter
+            while forward < len(self.chapters) and not self.chapters[forward].paragraphs:
+                forward += 1
+            if forward < len(self.chapters):
+                self.current_chapter = forward
+            else:
+                backward = self.current_chapter
+                while backward >= 0 and not self.chapters[backward].paragraphs:
+                    backward -= 1
+                self.current_chapter = max(0, backward)
+            chapter = self.chapters[self.current_chapter]
+        if chapter.paragraphs:
+            self.current_paragraph = max(
+                0, min(self.current_paragraph, len(chapter.paragraphs) - 1)
+            )
+        else:
+            self.current_paragraph = 0
 
     def next_paragraph(self) -> None:
         chapter = self.chapters[self.current_chapter]

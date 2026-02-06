@@ -7,6 +7,24 @@
   keywords: ["wind","steel","rail","frost"]
   description: "A frosty sunrise over the iron rails to echo the opening carriage scene."
 
+- id: dawn-mist
+  path: resources/images/dawn_train_mist.png
+  title: "Mist-Bound Rails"
+  chapter: "Chapter 1 — Dawn Ride"
+  priority: 70
+  tags: ["mist","dawn","rail"]
+  keywords: ["silence","dew","haze"]
+  description: "Low gray light swallows the forest beyond the tracks before the sun fully rises."
+
+- id: dawn-reflection
+  path: resources/images/dawn_train_reflection.png
+  title: "Glass Reflection"
+  chapter: "Chapter 1 — Dawn Ride"
+  priority: 65
+  tags: ["reflection","light"]
+  keywords: ["mirror","window","carriage"]
+  description: "The carriage glass mirrors the warm gold before the landscape is fully revealed."
+
 - id: market-whispers
   path: resources/images/market_lanterns.jpg
   title: "Lantern Market"
@@ -16,6 +34,24 @@
   keywords: ["lantern","scent","stall","merchant"]
   description: "Warm lantern glow spilling over stalls, mirroring the bustling bazaar."
 
+- id: market-bazaar
+  path: resources/images/market_bazaar.png
+  title: "Spice Bazaar Pulse"
+  chapter: "Chapter 2 — Market Whispers"
+  priority: 75
+  tags: ["spice","crowd"]
+  keywords: ["hustle","chatter","spice"]
+  description: "A thick ribbon of spice smoke and shouted bargains pulling the crowd along."
+
+- id: market-twilight
+  path: resources/images/market_twilight.png
+  title: "Twilight Lanterns"
+  chapter: "Chapter 2 — Market Whispers"
+  priority: 60
+  tags: ["twilight","lantern"]
+  keywords: ["glow","dusk","lantern"]
+  description: "Lanterns hover like orange speeches under the lowering sky."
+
 - id: night-tread
   path: resources/images/night_ridge.jpg
   title: "Night Ridge"
@@ -24,3 +60,21 @@
   tags: ["night","moon","howl"]
   keywords: ["shadows","cobble","howl","ridge"]
   description: "Moonlit ridge shadows to evoke the distant howls and cobblestones."
+
+- id: night-moon
+  path: resources/images/night_ridge_moon.png
+  title: "Frozen Moonrise"
+  chapter: "Chapter 3 — Nightfall Tread"
+  priority: 78
+  tags: ["moon","stillness"]
+  keywords: ["silver","ridge","still"]
+  description: "The moon hangs heavy, bathing the ridge in thin silver."
+
+- id: night-echo
+  path: resources/images/night_ridge_echo.png
+  title: "Echoing Ridge"
+  chapter: "Chapter 3 — Nightfall Tread"
+  priority: 65
+  tags: ["echo","wind"]
+  keywords: ["howl","rock","shadow"]
+  description: "Ridges bounce the howls back toward the valley, as if answering Mara."
