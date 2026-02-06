@@ -1,0 +1,12 @@
+[project]
+name = "book-reader"
+version = "0.1.0"
+description = "A Qt-powered desktop reader that pairs text passages with author-provided imagery."
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.6.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+book-reader-demo = "scripts.demo_reader:main"

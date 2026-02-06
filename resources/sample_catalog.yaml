@@ -1,0 +1,26 @@
+- id: dawn-ride
+  path: resources/images/dawn_train.jpg
+  title: "Winter Rail Dawn"
+  chapter: "Chapter 1 — Dawn Ride"
+  priority: 90
+  tags: ["dawn","train","frost"]
+  keywords: ["wind","steel","rail","frost"]
+  description: "A frosty sunrise over the iron rails to echo the opening carriage scene."
+
+- id: market-whispers
+  path: resources/images/market_lanterns.jpg
+  title: "Lantern Market"
+  chapter: "Chapter 2 — Market Whispers"
+  priority: 70
+  tags: ["market","lantern","spices"]
+  keywords: ["lantern","scent","stall","merchant"]
+  description: "Warm lantern glow spilling over stalls, mirroring the bustling bazaar."
+
+- id: night-tread
+  path: resources/images/night_ridge.jpg
+  title: "Night Ridge"
+  chapter: "Chapter 3 — Nightfall Tread"
+  priority: 80
+  tags: ["night","moon","howl"]
+  keywords: ["shadows","cobble","howl","ridge"]
+  description: "Moonlit ridge shadows to evoke the distant howls and cobblestones."
